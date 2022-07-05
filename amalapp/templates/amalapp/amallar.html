@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<dir container>
+    <h1>to'rt amalga doir misollar yechish</h1>
+    <form action="/" method="get">
+        Sonlarni kiriting:
+        <br>
+        <label for="birinchi_son">Birinchi sonni kiriting:</label>
+        <input type="number" name="first_number" id="birinchi_son">
+        <br>
+        <br>
+        <label for="ikkinchi_son">Ikkinchi sonni kiriting:</label>
+        <input type="number" name="second_number" id="ikkinchi_son">
+        <br>
+        <br>
+        Arifmetik amalni tanlang:
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="amal" value="qushish" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">qo'shish +</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="amal" value="ayirish" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">ayirish -</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="amal" value="kupaytirish" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">kupaytirish *</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="amal" value="bolish" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">bulish /</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-info">Hisoblash</button>
+        <br>
+        <br>
+        {% if natija %}
+        {{natija}}
+        {%else%}
+        {{xatolik}}
+        {%endif%}
+</dir>
+</body>
+</html>
